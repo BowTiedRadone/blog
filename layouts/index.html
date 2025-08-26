@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<div style="text-align: center; margin-bottom: 2rem;">
+    <img src="/images/profile.png" alt="Radu Bahmata" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+</div>
+
+<h1>Radu Bahmata</h1>
+
+<p>
+Welcome to my corner of the web. I'm a testing engineer and security researcher who finds genuine joy in breaking protocols and challenging assumptions. Pioneering fuzzing, property testing, and advanced exploitation techniques to reveal critical flaws before they can be weaponized.
+</p>
+
+<br/>
+
+<h1>Latest posts</h1>
+<div class="posts-list">
+{{ with .Site.GetPage "/posts" }}
+    {{ range first 3 (sort .Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="post">
+            <p>
+                <div class="date">
+                    {{ .Date | time.Format ":date_medium" }}
+                </div>
+                <h1>
+                    <a href="{{ .Permalink }}" title="{{ .Title }}">
+                        {{ .Title }}
+                    </a>
+                </h1>
+                {{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+
+{{ end }}

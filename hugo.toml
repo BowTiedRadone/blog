@@ -1,0 +1,21 @@
+baseurl = "https://bowtiedradone.github.io/blog/"
+title = "radubahmata"
+theme = "hugo-theme-console"
+languageCode = "en-us"
+
+[params]
+titleCutting = true
+animateStyle = "animated zoomIn fast"
+
+[params.social]
+twitter = "BowTiedRadone"
+github = "BowTiedRadone"
+email = "bowtiedradone@gmail.com"
+
+[[params.navlinks]]
+name = "about/"
+url = "about/"
+
+[[params.navlinks]]
+name = "posts/"
+url = "posts/"
