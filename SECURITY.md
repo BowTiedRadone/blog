@@ -4,7 +4,7 @@
 
 This blog uses the latest stable versions of:
 
-- Hugo (currently 0.140.2)
+- Hugo
 - GitHub Actions
 - hugo-theme-console
 
