@@ -1,0 +1,10 @@
+* @BowTiedRadone
+
+.github/workflows/* @BowTiedRadone
+
+# Site configuration files.
+hugo.toml @BowTiedRadone
+
+# Layouts and themes.
+layouts/* @BowTiedRadone
+themes/* @BowTiedRadone

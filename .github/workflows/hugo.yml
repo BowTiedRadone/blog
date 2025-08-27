@@ -32,7 +32,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.140.2" # Pin to specific version
+          hugo-version: "0.148.2" # Pin to specific version
           extended: true
 
       - name: Build
