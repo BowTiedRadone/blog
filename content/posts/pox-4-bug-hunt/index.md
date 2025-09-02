@@ -6,9 +6,15 @@ summary = "How we used stateful property testing to uncover three hidden bugs in
 
 Good testing makes life easier - fewer bugs, smoother releases, less stress when things go live. But what counts as "good enough" testing? Honestly, it's never good enough. Especially when you're dealing with critical system infrastructure.
 
-When I worked on Stacks [Proof of Transfer](https://docs.stacks.co/concepts/stacks-101/proof-of-transfer)(PoX-4) we had to make sure the system would behave correctly not just for individual operations, but for any sequence of operations users might throw at it.
+When I worked on Stacks [Proof of Transfer](https://docs.stacks.co/concepts/stacks-101/proof-of-transfer)(PoX-4) we had to make sure the system would behave correctly not just for individual operations, but for **any sequence of operations users might throw at it**.
 
-To address this, we built a **stateful property testing** setup with 20+ command generators covering every possible user interaction and ran 20,000 test iterations per session across 9 different wallet configurations. Why so much? Because smart contracts that coordinate entire networks can't afford bugs. The cost isn't just money - it's network halts, lost trust, and potentially breaking consensus.
+To address this, we built a stateful property testing setup with:
+
+- 20+ command generators covering every possible user interaction
+- 20,000 test iterations per session
+- 9 different wallet configurations
+
+Why so much? Because smart contracts that coordinate entire networks can't afford bugs. The cost isn't just money - it's network halts, lost trust, and potentially breaking consensus.
 
 ---
 
@@ -28,7 +34,7 @@ The key insight: our setup generates massive sequences of possible events that m
 
 Working with [Nikos Baxevanis](https://nikosbaxevanis.com), we used [fast-check](https://github.com/dubzzz/fast-check) to build a **stateful property testing** setup - [PR #4550](https://github.com/stacks-network/stacks-core/pull/4550). The goal was to achieve a _fuzzing_ effect against the PoX-4 contract. Note that back then, no fuzzer for Clarity code existed (though we later built [Rendezvous](https://github.com/stacks-network/rendezvous) - more on that in a future post).
 
-The approach is straightforward: our testing framework had three moving parts:
+The approach is straightforward. Our testing framework had three moving parts:
 
 1. **Simplified Model (TypeScript)** — a simplified data structure mirroring the main PoX-4 business logic
 2. **fast-check Console** — a setup capable of generating thousands of randomized sequences of valid user actions
