@@ -66,8 +66,8 @@ $ npm run test
 Our stateful property testing setup found three subtle but real bugs in PoX-4 - the kinds of edge cases that only surface when users interact with the system in unexpected ways:
 
 - **Missing validation in address handling** - [Issue #4645](https://github.com/stacks-network/stacks-core/issues/4645)
-- **Transaction abort instead of caller-catchable** - [PR #4670](https://github.com/stacks-network/stacks-core/pull/4670)
-- **Arithmetic overflow in delegation flows** - [Issue #4720](https://github.com/stacks-network/stacks-core/issues/4720)
+- **Transaction abort instead of caller-catchable error** - [PR #4670](https://github.com/stacks-network/stacks-core/pull/4670)
+- **Arithmetic underflow** - [Issue #4720](https://github.com/stacks-network/stacks-core/issues/4720)
 
 ---
 
