@@ -3,7 +3,7 @@ date = "2025-08-25"
 title = "About"
 +++
 
-I'm Radu Bahmata, a testing engineer and security researcher specialized in blockchain protocols. My tech journey began with exploring different areas before finding my focus in testing and security research. Currently, I work on the Stacks blockchain, where I build automated testing tools and sustain ongoing security efforts that help support the network's security goals. I'm a need-driven programmer - the tools I create come from real needs I encounter in my work.
+I'm Radu Bahmata, a software engineer and security researcher specialized in blockchain protocols. My tech journey began with exploring different areas before finding my focus in testing and security research. Currently, I work on the Stacks blockchain, where I build automated testing tools and sustain ongoing security efforts that help support the network's security goals. I'm a need-driven programmer - the tools I create come from real needs I encounter in my work.
 
 ---
 
